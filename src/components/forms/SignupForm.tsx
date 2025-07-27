@@ -46,7 +46,7 @@ export default function SignupForm() {
   };
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-md bg-gradient-to-b from-gray-50">
       <CardHeader>
         <CardTitle className="text-2xl text-center">Sign Up</CardTitle>
       </CardHeader>

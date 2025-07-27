@@ -36,7 +36,7 @@ export default function LoginForm() {
   };
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-md bg-gradient-to-b from-gray-50">
       <CardHeader>
         <CardTitle className="text-2xl text-center">Log In</CardTitle>
       </CardHeader>
@@ -45,7 +45,7 @@ export default function LoginForm() {
           {error && (
             <p className="text-red-500 text-sm text-center bg-red-50 p-2 rounded">
               {error}
-            </p>
+            </p> 
           )}
           <div>
             <label htmlFor="email" className="block text-sm font-medium">

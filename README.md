@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## SimplerTech UI – Auth Assignment
 
-## Getting Started
+A simple, responsive authentication system built using **Next.js (App Router)**, **Redux Toolkit**, and **Tailwind CSS**, supporting login and sign-up flows with protected routes and UI feedback.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+
+* **Framework:** Next.js 14 (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS, `shadcn/ui`
+* **State Management:** Redux Toolkit
+* **Testing:** Jest + React Testing Library (basic test included)
+* **Tooling:** ESLint, Prettier, PostCSS
+
+---
+
+## Features
+
+* Sign-Up: Register users and store them in Redux state
+* Login: Authenticate users from Redux store
+* Dashboard: Protected route, only accessible after login
+* Error Handling: Validations and login feedback with dismiss option
+* Responsive UI using reusable components
+* Navigation bar with route links
+* Scalable and clean project structure
+
+---
+
+## Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/PraveenGupta11001/SimplexTech.git
+   cd simplertech-ui
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Optional: Run tests
+
+   ```bash
+   npm run test
+   ```
+
+5. Access the app:
+
+   * `/signup` – Sign-Up page
+   * `/login` – Login page
+   * `/dashboard` – Protected route (only after login)
+
+---
+
+## Project Structure
+
+```
+simplertech-ui/
+├── app/
+│   ├── signup/page.tsx
+│   ├── login/page.tsx
+│   ├── dashboard/page.tsx
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   └── Navbar.tsx
+├── features/
+│   └── authSlice.ts
+├── store/
+│   └── userStore.ts
+├── __test__/
+│   └── Navbar.test.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Collaboration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Fork the repository
+2. Create a new branch:
 
-## Learn More
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make changes and commit
+4. Push to your fork and open a pull request
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* This project uses mock authentication (no database or backend).
+* State is managed fully on the client using Redux.
+* Easily extensible to integrate with real APIs or third-party auth services.

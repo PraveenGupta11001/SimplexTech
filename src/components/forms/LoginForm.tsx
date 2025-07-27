@@ -51,7 +51,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex items-center justify-center  bg-gradient-to-br from-blue-100 to-gray-50">
+    <div className="flex items-center justify-center min-h-screen w-7xl bg-gradient-to-br from-blue-100 to-gray-50">
       <Card className="w-full max-w-md bg-white shadow-xl rounded-xl p-6">
         <CardHeader>
           <CardTitle className="text-3xl text-center text-gray-900 font-bold">Log In</CardTitle>

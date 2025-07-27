@@ -67,7 +67,7 @@ export default function Contact() {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                className="mt-1 w-full border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
+                className="mt-1 w-full border-1 border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
                 rows={4}
                 required
               />

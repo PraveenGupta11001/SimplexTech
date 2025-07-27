@@ -26,28 +26,32 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8 space-y-12">
       {/* Hero Section */}
       <section className="flex items-center justify-center min-h-[50vh]">
-        <Card className="w-full max-w-2xl bg-gradient-to-b from-gray-50 to-gray-100">
+        <Card className="w-full max-w-2xl bg-white shadow-xl rounded-xl p-6">
           <CardHeader>
-            <CardTitle className="text-4xl text-center text-[var(--primary)]">
+            <CardTitle className="text-4xl text-center text-blue-700 font-bold">
               Welcome to SimplerTech
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-center">
-            <p className="text-lg">
+            <p className="text-lg text-gray-800">
               {isLoggedIn && currentUser
                 ? `Welcome back, ${currentUser.name || currentUser.email}!`
                 : "Experience modern authentication and a seamless dashboard."}
             </p>
-            <p className="text-base">
+            <p className="text-base text-gray-600">
               SimplerTech offers secure login, persistent user data with localStorage, and a scalable Next.js app with Redux state management.
             </p>
             {!isLoggedIn && (
               <div className="flex justify-center gap-4">
                 <Link href="/login">
-                  <Button className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300">Login</Button>
+                  <Button className="bg-blue-700 text-white hover:bg-blue-800 transition-colors rounded-md py-2 px-4">
+                    Login
+                  </Button>
                 </Link>
                 <Link href="/signup">
-                  <Button className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300">Signup</Button>
+                  <Button className="bg-teal-600 text-white hover:bg-teal-700 transition-colors rounded-md py-2 px-4">
+                    Signup
+                  </Button>
                 </Link>
               </div>
             )}
@@ -57,46 +61,46 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="grid gap-6 md:grid-cols-3">
-        <Card className="bg-gradient-to-b from-gray-50 to-gray-100">
+        <Card className="bg-white shadow-md rounded-lg p-4">
           <CardHeader>
-            <CardTitle>Secure Authentication</CardTitle>
+            <CardTitle className="text-xl text-gray-900">Secure Authentication</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Robust login system with Redux and localStorage for persistent sessions.</p>
+            <p className="text-gray-600">Robust login system with Redux and localStorage for persistent sessions.</p>
           </CardContent>
         </Card>
-        <Card className="bg-gradient-to-b from-gray-50 to-gray-100">
+        <Card className="bg-white shadow-md rounded-lg p-4">
           <CardHeader>
-            <CardTitle>Scalable Dashboard</CardTitle>
+            <CardTitle className="text-xl text-gray-900">Scalable Dashboard</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Access your personalized dashboard with user data and insights.</p>
+            <p className="text-gray-600">Access your personalized dashboard with user data and insights.</p>
           </CardContent>
         </Card>
-        <Card className="bg-gradient-to-b from-gray-50 to-gray-100">
+        <Card className="bg-white shadow-md rounded-lg p-4">
           <CardHeader>
-            <CardTitle>Responsive Design</CardTitle>
+            <CardTitle className="text-xl text-gray-900">Responsive Design</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Seamless experience across desktop and mobile devices.</p>
+            <p className="text-gray-600">Seamless experience across desktop and mobile devices.</p>
           </CardContent>
         </Card>
       </section>
 
       {/* Testimonials Section */}
       <section>
-        <h2 className="text-3xl font-semibold text-center mb-6">What Our Users Say</h2>
+        <h2 className="text-3xl font-semibold text-center mb-6 text-gray-900">What Our Users Say</h2>
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="bg-gradient-to-b from-gray-50 to-gray-100">
+          <Card className="bg-white shadow-md rounded-lg p-4">
             <CardContent className="pt-6">
-              <p className="italic">"SimplerTech made managing my account so easy and secure!"</p>
-              <p className="mt-2 font-medium">— Jane Doe</p>
+              <p className="italic text-gray-600">"SimplerTech made managing my account so easy and secure!"</p>
+              <p className="mt-2 font-medium text-gray-800">— Jane Doe</p>
             </CardContent>
           </Card>
-          <Card className="bg-gradient-to-b from-gray-50 to-gray-100">
+          <Card className="bg-white shadow-md rounded-lg p-4">
             <CardContent className="pt-6">
-              <p className="italic">"The dashboard is intuitive, and I love the clean design."</p>
-              <p className="mt-2 font-medium">— John Smith</p>
+              <p className="italic text-gray-600">"The dashboard is intuitive, and I love the clean design."</p>
+              <p className="mt-2 font-medium text-gray-800">— John Smith</p>
             </CardContent>
           </Card>
         </div>
@@ -104,24 +108,24 @@ export default function Home() {
 
       {/* Stats Section */}
       <section>
-        <h2 className="text-3xl font-semibold text-center mb-6">Our Impact</h2>
+        <h2 className="text-3xl font-semibold text-center mb-6 text-gray-900">Our Impact</h2>
         <div className="grid gap-6 md:grid-cols-3">
-          <Card className="bg-gradient-to-b from-gray-50 to-gray-100 text-center">
+          <Card className="bg-white shadow-md rounded-lg p-4 text-center">
             <CardContent className="pt-6">
-              <p className="text-4xl font-bold">10K+</p>
-              <p>Users Registered</p>
+              <p className="text-4xl font-bold text-blue-700">10K+</p>
+              <p className="text-gray-600">Users Registered</p>
             </CardContent>
           </Card>
-          <Card className="bg-gradient-to-b from-gray-50 to-gray-100 text-center">
+          <Card className="bg-white shadow-md rounded-lg p-4 text-center">
             <CardContent className="pt-6">
-              <p className="text-4xl font-bold">99.9%</p>
-              <p>Uptime</p>
+              <p className="text-4xl font-bold text-teal-600">99.9%</p>
+              <p className="text-gray-600">Uptime</p>
             </CardContent>
           </Card>
-          <Card className="bg-gradient-to-b from-gray-50 to-gray-100 text-center">
+          <Card className="bg-white shadow-md rounded-lg p-4 text-center">
             <CardContent className="pt-6">
-              <p className="text-4xl font-bold">100%</p>
-              <p>User Satisfaction</p>
+              <p className="text-4xl font-bold text-green-600">100%</p>
+              <p className="text-gray-600">User Satisfaction</p>
             </CardContent>
           </Card>
         </div>

@@ -51,15 +51,15 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <Card className="w-full max-w-md bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="flex items-center justify-center  bg-gradient-to-br from-blue-100 to-gray-50">
+      <Card className="w-full max-w-md bg-white shadow-xl rounded-xl p-6">
         <CardHeader>
-          <CardTitle className="text-2xl text-center">Log In</CardTitle>
+          <CardTitle className="text-3xl text-center text-gray-900 font-bold">Log In</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             {invalidTxt && (
-              <div className="bg-red-100 text-red-700 p-3 rounded flex justify-between items-center text-sm">
+              <div className="bg-red-50 text-red-700 p-3 rounded-lg flex justify-between items-center text-sm">
                 <span>{error}</span>
                 <button
                   type="button"
@@ -70,9 +70,8 @@ export default function LoginForm() {
                 </button>
               </div>
             )}
-
             <div>
-              <label htmlFor="email" className="block text-sm font-medium">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email Address
               </label>
               <Input
@@ -81,11 +80,12 @@ export default function LoginForm() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="mt-1 w-full border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
                 required
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
               </label>
               <Input
@@ -94,12 +94,13 @@ export default function LoginForm() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                className="mt-1 w-full border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
                 required
               />
             </div>
             <Button
               type="submit"
-              className="w-full bg-gray-200 hover:cursor-pointer hover:bg-gray-300"
+              className="w-full bg-blue-700 text-white hover:bg-blue-800 transition-colors rounded-md py-2 px-4"
               disabled={loading}
             >
               {loading ? "Logging In..." : "Log In"}

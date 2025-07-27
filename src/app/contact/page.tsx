@@ -24,15 +24,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <Card className="bg-gradient-to-b from-gray-50 to-black-100 w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 to-gray-50">
+      <Card className="w-full max-w-md bg-white shadow-xl rounded-xl p-6">
         <CardHeader>
-          <CardTitle className="text-3xl text-center">Contact Us</CardTitle>
+          <CardTitle className="text-3xl text-center text-gray-900 font-bold">Contact Us</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Name
               </label>
               <Input
@@ -40,11 +40,12 @@ export default function Contact() {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
+                className="mt-1 w-full border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
                 required
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email
               </label>
               <Input
@@ -53,11 +54,12 @@ export default function Contact() {
                 type="email"
                 value={form.email}
                 onChange={handleChange}
+                className="mt-1 w-full border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
                 required
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Message
               </label>
               <textarea
@@ -65,13 +67,13 @@ export default function Contact() {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                className="mt-1 w-full border px-3 py-2 rounded-md"
+                className="mt-1 w-full border-gray-300 focus:border-blue-700 focus:ring-blue-700 rounded-md p-2"
                 rows={4}
                 required
               />
             </div>
-            {error && <p className="text-red-500 text-sm">{error}</p>}
-            <Button type="submit" className="w-full bg-gray-200 hover:cursor-pointer hover:bg-gray-300">
+            {error && <p className="text-red-700 text-sm">{error}</p>}
+            <Button type="submit" className="w-full bg-blue-700 text-white hover:bg-blue-800 transition-colors rounded-md py-2 px-4">
               Send Message
             </Button>
           </form>
